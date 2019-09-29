@@ -1,0 +1,14 @@
+<project name="modul" default="jar" basedir=".">
+<target name="init">
+<mkdir dir="web"/>
+</target>
+<target name="compile" depends="init">
+<javac srcdir="src" destdir="web"/>
+</target>
+<target name="lib" depends="compile">
+<mkdir dir="web/lib"/>
+</target>
+<target name="jar" depends="lib">
+<jar basedir="src" destfile="web/lib/modul.jar"/>
+</target>
+</project>
